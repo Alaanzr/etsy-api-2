@@ -2,10 +2,10 @@ var api = require('./apiCaller.js'),
   priceData = {};
 
 exports.request = function(req, res) {
-  api(function(body) {
-    priceData.averagePrice = averagePrice(body);
-    priceData.highestPricedListing = highestPricedListing(body);
-    priceData.lowestPricedListing = lowestPricedListing(body);
+  api(function(data) {
+    priceData.averagePrice = averagePrice(data);
+    priceData.highestPricedListing = highestPricedListing(data);
+    priceData.lowestPricedListing = lowestPricedListing(data);
     res.json(priceData);
   });
 };
