@@ -1,4 +1,6 @@
-var request = require('request'), url = 'https://openapi.etsy.com/v2/listings/active?api_key=w2r477wqjrhhatv0ffdspjeh';
+var request = require('request'),
+  config = require('../../config/config.js'),
+  url = config.baseUrl + '?api_key=' + process.env.API_KEY;
 
 module.exports = function(callback) {
   request(url, function(err, res, body) {
