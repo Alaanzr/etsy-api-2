@@ -4,6 +4,8 @@ var api = require('./apiCaller.js'),
 exports.request = function(req, res) {
   api(function(body) {
     priceData.averagePrice = averagePrice(body);
+    priceData.highestPricedListing = highestPricedListing(body);
+    priceData.lowestPricedListing = lowestPricedListing(body);
     res.json(priceData);
   });
 };
@@ -14,4 +16,22 @@ averagePrice = function(data) {
     total += parseInt(data[i].price);
   }
   return total / data.length;
+};
+
+highestPricedListing = function(data) {
+  sortData(data);
+  return data[data.length - 1];
+};
+
+lowestPricedListing = function(data) {
+  sortData(data);
+  return data[0];
+};
+
+sortData = function(array) {
+  array.sort(function(a, b) {
+    if (parseInt(a.price) > parseInt(b.price)) return 1;
+    if (parseInt(a.price) < parseInt(b.price)) return -1;
+    return 0;
+  });
 };

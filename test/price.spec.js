@@ -9,4 +9,16 @@ describe('PriceCtrl', function() {
     });
   });
 
+  describe('highestPricedListing function', function() {
+    it('returns the listing with the highest price', function() {
+      expect(highestPricedListing(mockData)).toEqual(mockData[1]);
+    });
+  });
+
+  describe('lowestPriced Listing function', function() {
+    it('returns the listing with the lowest price', function() {
+      expect(lowestPricedListing(mockData)).toEqual(mockData[0]);
+    });
+  });
+
 });
