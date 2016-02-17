@@ -3,7 +3,7 @@ var request = require('request'), url = 'https://openapi.etsy.com/v2/listings/ac
 module.exports = function(callback) {
   request(url, function(err, res, body) {
     if (!err && res.statusCode === 200) {
-      callback();
+      callback(JSON.parse(body).results);
     } else {
       console.log(err);
     }
