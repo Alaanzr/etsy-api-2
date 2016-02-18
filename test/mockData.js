@@ -3,7 +3,7 @@ module.exports = [{
   category_id: 69150455,
   price: "48.00",
   currency_code: "CAD",
-  quantity: 1,
+  quantity: 3,
   tags: [
     "sew Sandy sew gift",
     "modern baby blanket",
@@ -44,5 +44,25 @@ module.exports = [{
     "acrylic",
     "tumbler",
     "cup"
+  ],
+}, {
+  listing_id: 237041937,
+  category_id: 69150455,
+  price: "60.00",
+  currency_code: "CAD",
+  quantity: 8,
+  tags: [
+    "sew Sandy sew gift",
+    "modern baby blanket",
+  ],
+  category_path: [
+    "Bags and Purses"
+  ],
+  materials: [
+    "Michael Miller",
+    "designer fabric",
+    "fabric label",
+    "minky",
+    "thread"
   ],
 }];

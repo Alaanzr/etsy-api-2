@@ -1,4 +1,5 @@
 var api = require('./apiCaller.js'),
+  helpers = require('./priceQuantityHelpers.js'),
   priceData = {};
 
 exports.request = function(req, res) {
@@ -11,11 +12,7 @@ exports.request = function(req, res) {
 };
 
 averagePrice = function(data) {
-  var total = 0;
-  for (var i = 0; i < data.length; i++) {
-    total += parseInt(data[i].price);
-  }
-  return total / data.length;
+  return helpers.average(data, "price");
 };
 
 highestPricedListing = function(data) {
@@ -28,10 +25,10 @@ lowestPricedListing = function(data) {
   return data[0];
 };
 
-sortData = function(array) {
+function sortData(array) {
   array.sort(function(a, b) {
     if (parseInt(a.price) > parseInt(b.price)) return 1;
     if (parseInt(a.price) < parseInt(b.price)) return -1;
     return 0;
   });
-};
+}
