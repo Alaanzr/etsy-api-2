@@ -11,21 +11,21 @@ exports.request = function(req, res) {
   });
 };
 
-averageQuantity = function(data) {
+exports.averageQuantity = function(data) {
   return helpers.average(data, "quantity");
 };
 
-highestQuantityListing = function(data) {
+exports.highestQuantityListing = function(data) {
   sortData(data);
   return data[data.length - 1];
 };
 
-lowestQuantityListing = function(data) {
+exports.lowestQuantityListing = function(data) {
   sortData(data);
   return data[0];
 };
 
-sortData = function(array) {
+var sortData = function(array) {
   array.sort(function(a, b) {
     if (parseInt(a.quantity) > parseInt(b.quantity)) return 1;
     if (parseInt(a.quantity) < parseInt(b.quantity)) return -1;

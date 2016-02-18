@@ -8,19 +8,19 @@ describe('QuantityCtrl', function() {
 
   describe('averageQuantity function', function() {
     it('returns the average quantity for listed items', function() {
-      expect(averageQuantity(mockData)).toEqual(4);
+      expect(quantityCtrl.averageQuantity(mockData)).toEqual(4);
     });
   });
 
   describe('highestQuantityListing function', function() {
     it('returns the listing with the highest price', function() {
-      expect(highestQuantityListing(mockData)).toEqual(item3);
+      expect(quantityCtrl.highestQuantityListing(mockData)).toEqual(item3);
     });
   });
 
   describe('lowestQuantityListing function', function() {
     it('returns the listing with the lowest quantity', function() {
-      expect(lowestQuantityListing(mockData)).toEqual(item2);
+      expect(quantityCtrl.lowestQuantityListing(mockData)).toEqual(item2);
     });
   });
 

@@ -6,19 +6,19 @@ describe('PriceCtrl', function() {
 
   describe('averagePrice function', function() {
     it('returns the average price for listed items', function() {
-      expect(averagePrice(mockData)).toEqual(76);
+      expect(priceCtrl.averagePrice(mockData)).toEqual(76);
     });
   });
 
   describe('highestPricedListing function', function() {
     it('returns the listing with the highest price', function() {
-      expect(highestPricedListing(mockData)).toEqual(item2);
+      expect(priceCtrl.highestPricedListing(mockData)).toEqual(item2);
     });
   });
 
   describe('lowestPriced Listing function', function() {
     it('returns the listing with the lowest price', function() {
-      expect(lowestPricedListing(mockData)).toEqual(item1);
+      expect(priceCtrl.lowestPricedListing(mockData)).toEqual(item1);
     });
   });
 

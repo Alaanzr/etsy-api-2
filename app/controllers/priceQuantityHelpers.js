@@ -5,11 +5,3 @@ exports.average = function(data, property) {
   }
   return total / data.length;
 };
-
-// sortData = function(array) {
-//   array.sort(function(a, b) {
-//     if (parseInt(a.price) > parseInt(b.price)) return 1;
-//     if (parseInt(a.price) < parseInt(b.price)) return -1;
-//     return 0;
-//   });
-// };

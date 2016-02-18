@@ -11,24 +11,24 @@ exports.request = function(req, res) {
   });
 };
 
-averagePrice = function(data) {
+exports.averagePrice = function(data) {
   return helpers.average(data, "price");
 };
 
-highestPricedListing = function(data) {
+exports.highestPricedListing = function(data) {
   sortData(data);
   return data[data.length - 1];
 };
 
-lowestPricedListing = function(data) {
+exports.lowestPricedListing = function(data) {
   sortData(data);
   return data[0];
 };
 
-function sortData(array) {
+var sortData = function(array) {
   array.sort(function(a, b) {
     if (parseInt(a.price) > parseInt(b.price)) return 1;
     if (parseInt(a.price) < parseInt(b.price)) return -1;
     return 0;
   });
-}
+};
