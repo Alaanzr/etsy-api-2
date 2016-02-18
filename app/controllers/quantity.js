@@ -16,19 +16,11 @@ exports.averageQuantity = function(data) {
 };
 
 exports.highestQuantityListing = function(data) {
-  sortData(data);
+  helpers.sortData(data, "quantity");
   return data[data.length - 1];
 };
 
 exports.lowestQuantityListing = function(data) {
-  sortData(data);
+  helpers.sortData(data, "quantity");
   return data[0];
-};
-
-var sortData = function(array) {
-  array.sort(function(a, b) {
-    if (parseInt(a.quantity) > parseInt(b.quantity)) return 1;
-    if (parseInt(a.quantity) < parseInt(b.quantity)) return -1;
-    return 0;
-  });
 };

@@ -16,19 +16,11 @@ exports.averagePrice = function(data) {
 };
 
 exports.highestPricedListing = function(data) {
-  sortData(data);
+  helpers.sortData(data, "price");
   return data[data.length - 1];
 };
 
 exports.lowestPricedListing = function(data) {
-  sortData(data);
+  helpers.sortData(data, "price");
   return data[0];
-};
-
-var sortData = function(array) {
-  array.sort(function(a, b) {
-    if (parseInt(a.price) > parseInt(b.price)) return 1;
-    if (parseInt(a.price) < parseInt(b.price)) return -1;
-    return 0;
-  });
 };
