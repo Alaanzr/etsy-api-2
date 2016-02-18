@@ -4,9 +4,9 @@ var api = require('./apiCaller.js'),
 
 exports.request = function(req, res) {
   api(function(data) {
-    priceData.averagePrice = averagePrice(data);
-    priceData.highestPricedListing = highestPricedListing(data);
-    priceData.lowestPricedListing = lowestPricedListing(data);
+    priceData.averagePrice = exports.averagePrice(data);
+    priceData.highestPricedListing = exports.highestPricedListing(data);
+    priceData.lowestPricedListing = exports.lowestPricedListing(data);
     res.json(priceData);
   });
 };

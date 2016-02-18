@@ -4,9 +4,9 @@ var api = require('./apiCaller.js'),
 
 exports.request = function(req, res) {
   api(function(data) {
-    quantityData.averageQuantity = averageQuantity(data);
-    quantityData.highestQuantityListing = highestQuantityListing(data);
-    quantityData.lowestQuantityListing = lowestQuantityListing(data);
+    quantityData.averageQuantity = exports.averageQuantity(data);
+    quantityData.highestQuantityListing = exports.highestQuantityListing(data);
+    quantityData.lowestQuantityListing = exports.lowestQuantityListing(data);
     res.json(quantityData);
   });
 };
