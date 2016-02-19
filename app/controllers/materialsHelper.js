@@ -29,3 +29,19 @@ exports.increaseCount = function(item, materialCount) {
     return doesMaterialExist ? materialCount[material] += 1 : materialCount[material] = 1;
   });
 };
+
+exports.filterListings = function(data, materials) {
+  return data.filter(function(listing) {
+    return exports.materialChecker(listing, 'materials', materials).indexOf(true) !== -1;
+  });
+};
+
+exports.materialChecker = function(listing, key, materials) {
+  return materials.map(function(material) {
+    return exports.listingHasMaterial(listing, key, Object.keys(material).toString());
+  });
+};
+
+exports.listingHasMaterial = function(listing, key, value) {
+  return listing[key].indexOf(value) !== -1;
+};
