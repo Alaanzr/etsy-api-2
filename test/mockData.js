@@ -16,7 +16,9 @@ module.exports = [{
     "designer fabric",
     "fabric label",
     "minky",
-    "thread"
+    "thread",
+    "tumbler",
+    "cup"
   ],
 }, {
   listing_id: 239691271,
@@ -43,7 +45,10 @@ module.exports = [{
   materials: [
     "acrylic",
     "tumbler",
-    "cup"
+    "cup",
+    "fabric label",
+    "minky",
+    "thread"
   ],
 }, {
   listing_id: 237041937,
@@ -63,6 +68,8 @@ module.exports = [{
     "designer fabric",
     "fabric label",
     "minky",
-    "thread"
+    "thread",
+    "tumbler",
+    "cup"
   ],
 }];
