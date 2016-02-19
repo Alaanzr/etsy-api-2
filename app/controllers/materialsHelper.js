@@ -1,10 +1,7 @@
 exports.materialCount = function(data) {
   var materialCount = {};
   data.map(function(item) {
-    item.materials.forEach(function(material) {
-      var doesMaterialExist = Object.keys(materialCount).indexOf(material) !== -1;
-      return doesMaterialExist ? materialCount[material] += 1 : materialCount[material] = 1;
-    });
+    exports.increaseCount(item, materialCount);
   });
   return materialCount;
 };
@@ -24,4 +21,11 @@ var materials = [];
     materials.push(obj);
   }
   return materials;
+};
+
+exports.increaseCount = function(item, materialCount) {
+  item.materials.forEach(function(material) {
+    var doesMaterialExist = Object.keys(materialCount).indexOf(material) !== -1;
+    return doesMaterialExist ? materialCount[material] += 1 : materialCount[material] = 1;
+  });
 };
