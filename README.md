@@ -6,12 +6,12 @@ This application contains a collection of JSON endpoints that output summary dat
 ```
 - GET /price - average price of the latest listings, highest price (with the listing), lowest price (with the listing)
 - GET /quantity - average quantity of per item, highest quantity (with the listing), lowest quantity (with the listing)
+- GET /materials - top 5 most common materials, and all the listings that contain them
+- GET /tags - top 5 most common tags, and all the listings that contain them
 ```
 
 #### Pending
 ```
-- GET /materials - top 5 most common materials, and all the listings that contain them
-- GET /tags - top 5 most common tags, and all the listings that contain them
 - GET /categories - all category paths, by frequency
 - GET / - route containing all the above information
 ```
