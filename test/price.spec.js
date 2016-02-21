@@ -2,7 +2,9 @@ describe('PriceCtrl', function() {
 
   var priceCtrl = require('../app/controllers/price.js');
   var mockData = require('./mockData.js');
-  var item1 = mockData[0], item2 = mockData[1], item3 = mockData[2];
+  var item1 = mockData[0],
+    item2 = mockData[1],
+    item3 = mockData[2];
 
   describe('averagePrice function', function() {
     it('returns the average price for listed items', function() {

@@ -2,10 +2,10 @@ describe('MaterialCtrl', function() {
 
   var materialCtrl = require('../app/controllers/materials.js');
   var mockData = require('./mockData.js');
-  var item1 = mockData[0], item2 = mockData[1], item3 = mockData[2];
+  var item1 = mockData[0],
+    item2 = mockData[1],
+    item3 = mockData[2];
   var tags = [{
-    "designer fabric": 2
-  }, {
     "fabric label": 3
   }, {
     "minky": 3
@@ -13,6 +13,8 @@ describe('MaterialCtrl', function() {
     "thread": 3
   }, {
     "tumbler": 3
+  }, {
+    "cup": 3
   }];
 
   describe('commonMaterials function', function() {

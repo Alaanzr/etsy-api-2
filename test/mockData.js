@@ -5,8 +5,12 @@ module.exports = [{
   currency_code: "CAD",
   quantity: 3,
   tags: [
-    "sew Sandy sew gift",
-    "modern baby blanket",
+    "iron",
+    "personalized tumbler",
+    "tumbler",
+    "mom",
+    "teacher gift",
+    "personalized teacher"
   ],
   category_path: [
     "Bags and Purses"
@@ -27,17 +31,12 @@ module.exports = [{
   currency_code: "USD",
   quantity: 1,
   tags: [
+    "iron",
     "personalized tumbler",
     "tumbler",
     "mom",
     "teacher gift",
     "personalized teacher",
-    "monogram tumbler",
-    "custom tumbler",
-    "monogram",
-    "bridesmaid gift",
-    "baby shower gift",
-    "mom tumbler"
   ],
   category_path: [
     "Weddings"
@@ -57,8 +56,8 @@ module.exports = [{
   currency_code: "CAD",
   quantity: 8,
   tags: [
-    "sew Sandy sew gift",
-    "modern baby blanket",
+    "iron",
+    "cotton",
   ],
   category_path: [
     "Bags and Purses"

@@ -1,5 +1,5 @@
 var api = require('./apiCaller.js'),
-  helpers = require('./materialsHelper.js'),
+  helpers = require('./materialsTagsHelper.js'),
   materialData = {};
 
 exports.request = function(req, res) {
@@ -11,12 +11,12 @@ exports.request = function(req, res) {
 };
 
 exports.commonMaterials = function(data) {
-  var materialCount = helpers.materialCount(data);
-  var materialsArray = helpers.createMaterialsArray(materialCount);
+  var materialCount = helpers.propertyCount(data, 'materials');
+  var materialsArray = helpers.createPropertiesArray(materialCount);
   return helpers.extractItems(materialsArray, 5);
 };
 
 exports.commonMaterialListings = function(data) {
   var materials = exports.commonMaterials(data);
-  return helpers.filterListings(data, materials);
+  return helpers.filterListings(data, 'materials', materials);
 };
