@@ -14,13 +14,11 @@ exports.increaseCount = function(item, propertyCount, propertyName) {
 };
 
 exports.createPropertiesArray = function(propertyCount) {
-  var properties = [];
-  for (var property in propertyCount) {
-    var obj = {};
-    obj[property] = propertyCount[property];
-    properties.push(obj);
-  }
-  return properties;
+  return Object.keys(propertyCount).map(function(property) {
+    var properties = {};
+    properties[property] = propertyCount[property];
+    return properties;
+  });
 };
 
 exports.extractItems = function(array, numResults) {
